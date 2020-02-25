@@ -31,7 +31,7 @@ public class Test {
 		programacion.cambiodeHora(10,30);
 		BBDD.cambiodeFecha(5,3,2020);
 		
-		if ((programacion.getFecha().equals(BBDD.getFecha())==true)||(programacion.getFecha()==Entornos.getFecha())||(programacion.getFecha()==Lenguajes.getFecha())||(programacion.getFecha()==Sistemas.getFecha())){
+		if ((programacion.getFecha()==BBDD.getFecha()))||(programacion.getFecha()==Entornos.getFecha())||(programacion.getFecha()==Lenguajes.getFecha())||(programacion.getFecha()==Sistemas.getFecha())){
 			System.out.println("Error, hay que cambiar la fecha a Programacion.");
 		}else {
 			if ((BBDD.getFecha()==programacion.getFecha())){

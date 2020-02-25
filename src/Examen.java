@@ -44,24 +44,24 @@ public class Examen {
 	public void setHora(Hora hora) {
 		this.hora = hora;
 	}
-	public void cambiodeFecha2(Fecha fecha){
+	public void cambiodeFecha(int dia,int mes, int año){
 		
-	}
-	public void cambiodeFecha(int dia,int mes,int año){
+		Fecha fecha = new Fecha (dia,mes,año);
 		
-		if (año==2020){
-			if (mes==4 || mes==6 || mes==9 || mes== 11){
-				this.fecha = new Fecha (dia,mes,año);
+		if (fecha.getAño()==2020){
+			if (fecha.getMes()==4 || fecha.getMes()==6 || fecha.getMes()==9 || fecha.getMes()== 11){
+				this.fecha = fecha;
 				System.out.println("Fecha cambiada correctamente."+this.nombreAsignatura);
 			}
-			if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12){
-				this.fecha = new Fecha (dia,mes,año);
+			if (fecha.getMes()==1 || fecha.getMes()==3 || fecha.getMes()==5 || fecha.getMes()==7 || fecha.getMes()==8 || fecha.getMes()==10 || fecha.getMes()==12){
+				this.fecha = fecha;
 				System.out.println("Fecha cambiada correctamente."+this.nombreAsignatura);
 			}
 		}else {
 				System.out.println("ERROR EN LA FECHA."+this.nombreAsignatura);
 
 		}
+		
 
 	}
 	public void cambiodeHora(int horas,int minutos){
@@ -76,7 +76,6 @@ public class Examen {
 		return "Examen [nombreAsignatura=" + nombreAsignatura + ", aula=" + aula + ", fecha=" + fecha + ", hora=" + hora
 				+ "]";
 	}
-	
-	
+
 	
 }
