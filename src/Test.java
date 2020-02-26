@@ -29,19 +29,21 @@ public class Test {
 		Examen FOL = new Examen ("Formacion y Orientacion Laboral","2");
 		
 		programacion.cambiodeHora(10,30);
-		BBDD.cambiodeFecha(5,3,2020);
+		programacion.cambiodeFecha(6,3,2020);
 		
-		if ((programacion.getFecha()==BBDD.getFecha()))||(programacion.getFecha()==Entornos.getFecha())||(programacion.getFecha()==Lenguajes.getFecha())||(programacion.getFecha()==Sistemas.getFecha())){
+		if ((programacion.getFecha().toString().equals(BBDD.getFecha().toString())==true)||(programacion.getFecha().toString().equals(Entornos.getFecha().toString())==true)||(programacion.getFecha().toString().equals(Lenguajes.getFecha().toString())==true)||(programacion.getFecha().toString().equals(Sistemas.getFecha().toString())==true)){
 			System.out.println("Error, hay que cambiar la fecha a Programacion.");
 		}else {
-			if ((BBDD.getFecha()==programacion.getFecha())){
+			if ((BBDD.getFecha().toString().equals(Entornos.getFecha().toString())==true)||(BBDD.getFecha().toString().equals(Lenguajes.getFecha().toString())==true)||(BBDD.getFecha().toString().equals(Sistemas.getFecha().toString())==true)){
 				System.out.println("Error, hay que cambiar la fecha a BBDD.");
 			}else {
-				if ((Entornos.getFecha()==Lenguajes.getFecha())||(Entornos.getFecha()==Sistemas.getFecha())){
+				if ((Entornos.getFecha().toString().equals(Lenguajes.getFecha().toString())==true)||(Entornos.getFecha().toString().equals(Sistemas.getFecha().toString())==true)){
 					System.out.println("Error, hay que cambiar la fecha a Entornos.");
 				}else {
-					if ((Lenguajes.getFecha()==Sistemas.getFecha())){
+					if ((Lenguajes.getFecha().toString().equals(Sistemas.getFecha().toString())==true)){
 						System.out.println("Error, hay que cambiar la fecha a lenguajes.");
+					}else {
+						
 					}
 				}
 			}

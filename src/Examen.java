@@ -1,10 +1,10 @@
 
 public class Examen {
 
-	private String nombreAsignatura;
-	private String aula;
-	private Fecha fecha;
-	private Hora hora;
+	 String nombreAsignatura;
+	 String aula;
+	 Fecha fecha;
+	 Hora hora;
 	
 	
 	public Examen(String nombreAsignatura, String aula) {
@@ -62,7 +62,6 @@ public class Examen {
 
 		}
 		
-
 	}
 	public void cambiodeHora(int horas,int minutos){
 		if ((horas>=9 || horas<=14) && (minutos>=0 || minutos<=60)){
